@@ -1,0 +1,617 @@
+[
+    {
+        "id": 1,
+        "image": "img/filmflux.png",
+        "alt_text": "Screenshots af forsiden til film databasen Film Flux",
+        "name": "Film Flux",
+        "slug": "filmflux",
+        "excerpt": "En hjemmeside til at vise en oversigt over film online, der henter daten fra TheMovieDatabase, lavet i forlængelse med en kodeopgave til praktiksøgning.",
+        "problem": "En kunde ønsker at have en hjemmeside der kan holde en oversigt over film. De har allerede et simpelt API over film og deres information, men der mangler noget visuelt, så en bruger kan se hvilke film der er og tilføje dem til en “watchlist”. ",
+        "solution": "Ved brug af kun Javascript, HTML og CSS har jeg udviklet en side der henter data ned fra API’et og viser film fra forskellige genre man kan gå ind og læse mere op, samt tilføje og fjerne film fra en watchliste.",
+        "roles": "Designer - Udvikler",
+        "links": {
+            "github": "https://github.com/Veksoe/filmflux",
+            "live_demo": "https://veksoe.github.io/filmflux/index.html"
+        },
+        "tools": {
+            "tool1": {
+                "name": "Visual Studio Code",
+                "icon": "icons/vscode.svg",
+                "usage": "Alt kode er blevet skrevet i Visual Studio Code. Foruden at hente data og sætte data ind dynamisk, er JavaScript også blevet brugt til at lave en karousel og håndteringen af watchlisten.    "
+            },
+            "tool2": {
+                "name": "GitHub",
+                "icon": "icons/GitHub_Logo.svg",
+                "usage": "Git blev brugt til at versions-sikre koden og ligge den op online. Yderligere bliver live-demoen hostet gennem Github pages."
+            }
+        },
+        "case_study": {
+            "section1": {
+                "heading": "Datahentning",
+                "heading_slug": "datahentning",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/api_token.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/fetching.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "For at kunne få adgang til dataen på skal der sendes en API Access Token med i fetchen, men da koden bliver lagt op på git, og min token er specifik til mig og ikke må deles med alle har jeg ikke bare kunne ligge den med op sammen med alt det andet kode. Den er dog også nødvendig for at kunne få data vist på siden, jeg valgte derfor at opsætte en prompt der beder om en API Access Token og gemmer den lokalt. ",
+                    "paragraf2": "Med adgang til dataen bliver det hentet ned med en fetch. Til at hente dataet til de individuelle film sider kræver det dog lidt mere end en almindelig fetch, da der skal bruges data fra forskellige links. Her har jeg brugt Promise.all() og henter på den måde data fra flere sider på en gang."
+                }
+            },
+            "section2": {
+                "heading": "Film karousel",
+                "heading_slug": "filmkarousel",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/carousel_swap.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/carousel_swap_btn.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/filmflux/carousel_autoswap.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "At opsætte en karousel dynamisk gennem JavaScript der løbende skal have ændre klasser kan være lidt af et projekt. Jeg har fået det til at virke ved at kalde en funktion der initialisere karousellens funktionalitet i slutningen af renderingen af HTMLen. Ved at fange de forskellige positioner med document.querySelector() og getElementById() bliver klasserne skiftet ud med classList.replace() så de kan skifte plads, og komme hen på de rigtige pladser. ",
+                    "paragraf2": "Udskiftningen af klasserne bliver så gjort, når en swap-funktion bliver kaldt, hvilket den gør når man trykker på pilene. Her er der lavet en funktion til hver retning - med uret og mod uret. Swap-funktionen bliver også kaldt når karousellen bliver initialiseret, i forbindelse med at den automatisk skal loppe igennem karousellen."
+                }
+            },
+            "section3": {
+                "heading": "Film side",
+                "heading_slug": "filmside",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/directors.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/watchlist_btn.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "At vise filmenes information krævede en del forskellige tjeks, da nogle ting ikke var ved alle film, og kræver en fallback. Dette gælder fx ved direktører og skuespillere. Da det ikke er alle der har et billedet knyttet til sig, har jeg lavet en fallback der tjekker om de har et billede. Har de, skal den bruge det billede, og har de ikke skal den bruge et placeholder billede. Ved filmens backdrop tjekker den også efter om der er et billede, og hvis der ikke er, skal den bruge filmens poster.",
+                    "paragraf2": "At vise filmenes information krævede en del forskellige tjeks, da nogle ting ikke var ved alle film, og kræver en fallback. Dette gælder fx ved direktører og skuespillere. Da det ikke er alle der har et billedet knyttet til sig, har jeg lavet en fallback der tjekker om de har et billede. Har de, skal den bruge det billede, og har de ikke skal den bruge et placeholder billede. Ved filmens backdrop tjekker den også efter om der er et billede, og hvis der ikke er, skal den bruge filmens poster."
+                }
+            },
+            "section4": {
+                "heading": "Watchlist",
+                "heading_slug": "watchlist",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "-",
+                    "paragraf2": "-"
+                }
+            },
+            "section5": {
+                "heading": "Opsamling",
+                "heading_slug": "opsamling",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "-",
+                    "paragraf2": "-"
+                }
+            },
+            "section6": {
+                "heading": "Optimering",
+                "heading_slug": "optimering",
+                "images": {
+                    "image1": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/filmflux/-",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "-",
+                    "paragraf2": "-"
+                }
+            }
+        }
+    },
+    {
+        "id": 2,
+        "image": "img/solkilde.png",
+        "alt_text": "Et screenshot af forsiden til hjemmesiden lavet til Solkilde.",
+        "name": "Solkilde",
+        "slug": "solkilde",
+        "excerpt": "Den lokale galleri- og kunsthåndværkbutik Solkilde havde en gang en hjemmeside, og de savner de fordele det gav at have en. Denne case study går gennem realiseringen af hjemmensiden skabt til dem i forlængelse af et eksamensprojekt.",
+        "problem": "Solkilde er en lille, lokal galleri- og kunsthåndværksbutik nær Tversted Strand, der drømmer om at kunder kan få en forsmag på butikken og dens varer gennem en hjemmeside. De vil gerne have en hjemmeside der kan fremvise dem selv og et særligt udvalg af deres varer.",
+        "solution": "Efter brugerundersøgelse og samtaler med kunden, udviklede vi en hjemmeside gennem et CMS, der fungerer som en katelog-side, hvor kunden kan fremvise udvalgte produkter fra deres side. Produkterne kan opsættes gennem Wordpress.",
+        "roles": "Coordinator - Udvikler",
+        "links": {
+            "github": "https://github.com/Veksoe/solkilde-mmd2",
+            "live_demo": "https://veksoe.github.io/solkilde-mmd2/index.html"
+        },
+        "tools": {
+            "tool1": {
+                "name": "Adobe XD",
+                "icon": "icons/adobexd.svg",
+                "usage": "Adobe XD til opsætningen af wireframes og mock-ups. Mock-upsene blev brugt til at skabe en interaktiv prototype."
+            },
+            "tool2": {
+                "name": "Visual Studio Code",
+                "icon": "icons/vscode.svg",
+                "usage": "Visual Studio Code blev brug som editor til at udvikle og håndtere hjemmesidens HTML, CSS og JavaScript. JavaScript blev brugt til at opsætte simpel filtrering, dynamisk generering af indhold, samt henting af data gennem et API."
+            },
+            "tool3": {
+                "name": "Github",
+                "icon": "icons/GitHub_Logo.svg",
+                "usage": "Git blev brug til at arbjede sammen og på tværs af computerer, og til at versions-sikre koden."
+            }
+        },
+        "case_study": {
+            "section1": {
+                "heading": "Indhold",
+                "heading_slug": "indhold",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/tematisk_analysis.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/persona_martin.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/persona_gitte.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/solkilde/persona_analysis.png",
+                        "alt_text": "alt text"
+                    },
+                    "image5": {
+                        "image": "img/solkilde/kravspecification.png",
+                        "alt_text": "alt text"
+                    },
+                    "image6": {
+                        "image": "img/solkilde/sitemap.png",
+                        "alt_text": "alt text"
+                    },
+                    "image7": {
+                        "image": "img/solkilde/mockup_5sec.png",
+                        "alt_text": "alt text"
+                    },
+                    "image8": {
+                        "image": "img/solkilde/usability1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image9": {
+                        "image": "img/solkilde/usability2.png",
+                        "alt_text": "alt text"
+                    },
+                    "image10": {
+                        "image": "img/solkilde/usability3.png",
+                        "alt_text": "alt text"
+                    },
+                    "image11": {
+                        "image": "img/solkilde/usability4.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Til at få en forståelse for hvem kunderne hos Solkilde var, lavede vi brugersegmentering på objektive og subjektive forhold. Observationerne her fra, brugte vi til at udføre kvalitative interview, tematisk analyse og personas for at forstå hvilke behov brugerne kunne have.",
+                    "paragraf2": "For at få et overblik over hvad der skulle være af indhold på hjemmesiden, organisere vi alt det indhold butikken havde på Instragram, der var deres primære platform, og anmeldelser på Tripadvisor og Google, i et content inventory. Ved hjælp af brain dump og et affinity diagram, skabte vi et overblik over alt indhold vi vurderede der skulle være på siden, ud fra dataet samlet fra interview, personas, kundemøder samt indhold og spørgsmål fra Instragram og anmeldelser.",
+                    "paragraf3": "Til at prioritere vores arbejde, opsatte vi kravspecifikation med MoSCoW-metoden, og valgte hovedsageligt at fokusere på Must Have-kravene.",
+                    "paragraf4": "Med et overblik over indhold og hvordan vi skulle prioritiseret vores arbejde, kunne vi opsætte sidens wayfinding og navigation, gennem sitemap og content sitemap, så vi havde en ide om hvilke sider hjemmesiden skulle have, hvordan de skulle linke til hinanden, samt hvilket indhold der skulle være hvor.",
+                    "paragraf5": "Til udviklingen af selve designet, startede vi ud med at lave et moodboard, for at visualisere vore tanker og ideer, både til hinanden og til Solkildes ejere.  Efterfølgende kunne vi begynde på de tre faser af siden konkrete design:",
+                    "paragraf6": "- Skitsering",
+                    "paragraf7": "- Wireframing",
+                    "paragraf8": "- Mock-up/prototyping",
+                    "paragraf9": "For at blive klogere på om designet fungerede som vi forventede, lavede vi en 5-seconds test, for at se hvad en brugers førstehåndsindtryk af siden var, efterfulgt af en think aloud test, for at teste designet, flowet og indholdet. "
+                }
+            },
+            "section2": {
+                "heading": "WordPress Opsætning",
+                "heading_slug": "wordpresssetup",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/feltgroups.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/feltgroup_post.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/taxonomy.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Da produkterne på siden skal hentes ned gennem et API, startede vi med at opsætte WordPress. Alt det data der skal hentes ned er blevet sat op gennem feltgrupper, så vi på den måde kan sætte struktureret og detaljeret produktinformation dynamisk ind på siden gennem JavaScript. ",
+                    "paragraf2": "Metadataet har vi sat op gennem taksonomier og kategorier. Taksonomierne skal bruges til selve filtreringen, mens kategorierne er for at kunne dele produkterne op i to grupper; møbler og boligdekoration. "
+                }
+            },
+            "section3": {
+                "heading": "Dynamisk HTML",
+                "heading_slug": "dynamiskhtml",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/footer.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/tab_title.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/preview_card.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/solkilde/extra_img.png",
+                        "alt_text": "alt text"
+                    },
+                    "image5": {
+                        "image": "img/solkilde/extra_info.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Det meste indhold på siden er blevet sat ind manuelt, da det sjældent skal opdateres eller skal genbruges på flere sider, men fire ting er blevet opsat dynamisk gennem JavaScript:",
+                    "paragraf2": "- Footeren,",
+                    "paragraf3": "- Title-tagget på produktsider,",
+                    "paragraf4": "- Preview card af produkterne,",
+                    "paragraf5": "- Den fulde indhold til et produkt.",
+                    "paragraf6": "Footeren er blevet sat op dynamisk, da den ser ens ud på alle sider, og vi på den måde kun skal rette et sted, hvis noget skal ændres, frem på alle sider footeren er på. For at fane-titlen kan have navnet på det produkt man er inde på, bliver den sat til produktets navn med document.querySelector().textContent, når vi kalder funktionen der opsætter indholdet til det fulde produkt.",
+                    "paragraf7": "Når vi rendere et preview card, starter vi med at tjekke om der er blevet sat et billede i API’et for at koden ikke skal fejle, hvis der ikke er. For at gøre billedet responsivt sætter vi det op med srcset, og bruger WordPress’ forskellige opløsninger af billedet. Indholdet bliver derefter renderet med innerHTML, hvor vi brugte data fra API’et sat gennem WordPress.",
+                    "paragraf8": "I renderingen af det fulde produkt, har vi to typer af billeder; hovedbilledet og ekstra billeder. Hovedbilledet sætter vi op med srcset, så det er responsivt, og ved ekstrabilleder tjekker vi også om der er et billede at hente i API’et, så koden ikke fejler. Et tjek lignende det til billeder, udføre vi også ved certificerings indholdet og behandlingsindholdet, da det ikke er alle produkter der skal have dette indhold"
+                }
+            },
+            "section4": {
+                "heading": "Fetching",
+                "heading_slug": "fetching",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/fetch_products.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/fetch_product_page.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/get_id.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/solkilde/fetch_from_taxonomy.png",
+                        "alt_text": "alt text"
+                    },
+                    "image5": {
+                        "image": "img/solkilde/taxonomy_fetch.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Til at hente indhold gennem API’et har vi tre funktioner:",
+                    "paragraf2": "- En til at hente mange produkter.",
+                    "paragraf3": "- En til at hente en produktside.",
+                    "paragraf4": "- En til at hente produkter ud fra taksonomier.",
+                    "paragraf5": "Funktionen til at hente mange produkter, bruges når vi skal at opsætte en kategori side. Når funktionen kaldes tager den fire parameter:",
+                    "paragraf6": "- En placering, der fortæller hvor indholdet skal placeres,",
+                    "paragraf7": "- et kategori ID, der bruges til at hente data fra enten møbler eller dekorationer,",
+                    "paragraf8": "- et antal, der siger hvor mange objekter/produkter den skal hente,",
+                    "paragraf9": "- og et offset så den ikke henter produkter der allerede er blevet hentet.",
+                    "paragraf10": "Et tjek om der er mere data at hente bliver gjort, for at se om knappen til at hente flere produkter skal vises, og alt dataen bliver tilføjet et array der holder det hentede data, inden preview cardet bliver renderet.",
+                    "paragraf11": "Når vi henter dataen til en produktside, bliver der taget to parameter ind:",
+                    "paragraf12": "- Et produkt ID, der bliver brugt i url’et, så vi går adgang til det aktuelle produkts data,",
+                    "paragraf13": "- og en placering, der lige som før fortæller hvor indholdet skal placeres.",
+                    "paragraf15": "Når dataen er hentet, køre vi funktionen til at rendere indholdet til en produktside. Produkt ID’et fanger vi med URLSearchPrams(), så vi kan tjekke query-parameterne i url’et igennem i det aktuelle vindue, og indsætter hvad der står efter “id” ind i en variable. ",
+                    "paragraf16": "HentProdukterFraTaxonomi-funktionen  tager 10 parameter ind:",
+                    "paragraf17": "- Et kategori-id, der, som før, fortæller om det er produkter fra møbel-siden eller dekorations-siden vi skal hente fra,",
+                    "paragraf18": "- en til hver taxonomi, så vi kan holde styr på hvilke taxonomier vi skal hente data fra,",
+                    "paragraf19": "- et antal, der, siger hvor mange objekter/produkter den skal hente,",
+                    "paragraf20": "- og en placering, der igen fortæller hvor indholdet skal placeres.",
+                    "paragraf21": "Som det første i funktionen laver vi en variable til at holde styr på hvordan det filtererede url er ud, og initialisere en variable med en tom string, til at holde styr på vores query-parameter. Vi laver, nemlig, efterfølgende et tjek på hver af taxonomierne, for at se om der er noget i dem. Hvis der er, tilføjer vi den query-parameter der høre til den taxonomi til vores query-variable, sammen med indholdet i den aktuelle parameter fra funktionen.",
+                    "paragraf22": "På den måde, kan vi sammensætte det filtrerede url og vores query-variable sammen når vi fetcher, og hente præcist det indhold der er blevet valgt i filtreringen. Når vi henter dataen, tjekker vi om der faktisk er noget data, så vi ved om vi skal give noget feedback om, at der ikke er nogle produkter der matcher filteringen, eller vise produkt cardsene. "
+                }
+            },
+            "section5": {
+                "heading": "Filtrering",
+                "heading_slug": "filtrering",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/filter_function_setup.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/filter_fetch.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Da der er lidt forskel på produkterne i de to kategorier, blev der lavet en filtreringsfunktion til hver, men de er begge bygget op på samme måde, bare med forskellige taxonomier.",
+                    "paragraf2": "I starten af funktionen, sikre vi at der ikke bliver vist noget gammelt filtrering ved at indsætte en tom string i innerHTML. Efterfølgende initialiserer vi en variabel til hver taxonomi i den respektive kategori med et tomt array, der skal bruges til at gemme de valgte filtre i. ",
+                    "paragraf3": "For at tjekke om en filtermulighed er blevet checked, bruger vi ID og document.querySelector() til at se om bestemte HTML-elementer er blevet checked, og pusher værdien til det aktuelle element i det taxonomi-array det hører det. Dette tjek bliver lavet på alle filtreringsmulighederne.",
+                    "paragraf4": "Når funktionen har kørt gennem alle filtreringsmulighederne slutter den af med at køre funktionen til at fetche produkter gennem taxonomier, så alle produkterne der matcher de valgte filtreringsmuligheder kan blive vist på siden."
+                }
+            },
+            "section6": {
+                "heading": "Optimering",
+                "heading_slug": "optimering",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/filter_userexperience.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/accordians.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/fetch_update.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/solkilde/filter_fix_update.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Det beskrevet filtrering virker ikke optimalt, og ville ikke kunne bruges på en reel side. Efter afleveringen af projektet, vendte jeg tilbage til filtreringen for at optimere det og gøre det mere brugbart. Der var følgende problemer:",
+                    "paragraf2": "- Boksen med filtreringsmulighederne var alt for lang og ikke brugervenlig,",
+                    "paragraf3": "- der blev kun filtreret på de 9 produkter der bliver hentet når man går ind på siden,",
+                    "paragraf4": "- og når man trykker på “Se flere”- knappen henter den alt, og man skal filtere igen.",
+                    "paragraf5": "For at mindske størrelsen af filtrerings-boksen lavede jeg dem til accordians, og loopede gennem alle accordiansene og opsatte et click-event på hver. Når man så klikkede på en accordian ville det tilhørende indhold blive vist.",
+                    "paragraf6": "Ved selve filtreringen skal både filtrering og knappen tage højde for at der er mere data end der er fetched. For at få dette til at ske, startede jeg med at slå hentProdukter() og hentProdukterFraTaxonomy() sammen til en funktion, og ændre skift hentProdukterFraTaxonomy() ud med hentProdukter() de steder den blev kaldt. På den måde bliver der taget højde for filtrering hver gang der bliver hentet produkter.",
+                    "paragraf7": "For at få knappen til at tage højde at der er mere data, skal knappen køre filtrerings-funktionen når den bliver klikket på. Rydningen af HTML’en skal flyttes fra filtrering-funktionen til at gøres hver gang man toogler en filtreringsmulighed, og så skal listen af hentet produkter også tømmes, hver gang der bliver tooglet en mulighed."
+                }
+            },
+            "section7": {
+                "heading": "Opsamling",
+                "heading_slug": "opsamling",
+                "images": {
+                    "image1": {
+                        "image": "img/solkilde/fin_hero.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/solkilde/products.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/solkilde/product_page.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Overordnet set synes produktet leveret til Solkilde at være rimeligt vellykket. Det er lykkedes os at skabe en side vi selv mener er blevet professionel, brugervenlig og SEO-optimeret, hvilket var hovedfokuseret i projektet. Hjemmesiden styrker Solkildes online markedsføring og bidrager til at øge deres synlighed og tiltrække flere kunder.",
+                    "paragraf2": "Når det er sagt, er siden ikke uden problemer. Selvom filtreringen er blevet optimeret og nu virker som den burde, er der mange filtreringsmuligheder, og når man ser på mængden af produkter, men kan diskuterer om hvorvidt der er nødvendigt med så mange muligheder - eller filtrering generelt. Især når man tænker på at Solkilde ikke ønsker en webshop, men en form for portfolio-/produktside. ",
+                    "paragraf3": "Selve opsætningen af produkterne giver også nemt brugeren en fornemmelse af at være på en webshop, og selvom vi har arbejdet meget på at skabe design og indhold, der skulle bidrage til at trække brugerens tanker væk fra dette, har det ikke helt lykkedes."
+                }
+            }
+        }
+    },
+    {
+        "id": 3,
+        "image": "img/denblafestival.png",
+        "alt_text": "Screenshots af webapplikationen lavet til Den Blå Festival",
+        "name": "Den Blå Festival",
+        "slug": "denblafestival",
+        "excerpt": "Projektopgave hvor formålet var at udvikle en web-applikation der kunne bruges som et redskab til at skabe overskuelighed over et koncertprogram.",
+        "problem": "Jazz festivalen “Den Blå Festival” i Aalborg, har altid et omfattende udbud af koncerter, og med et program der kun er publiceret som trykt program, eller som PDF på deres hjemmeside, har de brug for en digital løsning der giver brugerene et overskueligt overblik over koncertprogrammet.",
+        "solution": "Med en web-applikationer der samler alle koncerterne et sted, tilrettelagt efter interviews med en brugergruppe har vi forsøgt at udvikle en løsning der giver brugerne mulighed for at få et overblik over koncerterne og nemmere udvælge hvad de ønsker at se.",
+        "roles": "Coordinator - Designer - Udvikler",
+        "links": {
+            "github": "https://github.com/Veksoe/den-bla-festival-modul-4",
+            "live_demo": "https://mmd.ucn.dk/class/MMD-CSD-S23/10191754/DenBlaFestival/index.html"
+        },
+        "tools": {
+            "tool1": {
+                "name": "Adobe XD",
+                "icon": "icons/adobexd.svg",
+                "usage": "Adobe XD til opsætningen af wireframes og mock-ups. Mock-upsene blev brugt til at skabe en interaktiv prototype."
+            },
+            "tool2": {
+                "name": "Visual Studio Code",
+                "icon": "icons/vscode.svg",
+                "usage": "Visual Studio Code blev brug som editor til at udvikle og håndtere hjemmesidens HTML, CSS og JavaScript. JavaScript blev brug til at opsætte simpel filtrering."
+            },
+            "tool3": {
+                "name": "Github",
+                "icon": "icons/GitHub_Logo.svg",
+                "usage": "Git blev brug til at arbjede sammen og på tværs af computerer, og til at versions-sikre koden."
+            }
+        },
+        "case_study": {
+            "section1": {
+                "heading": "Brugeren",
+                "heading_slug": "brugeren",
+                "images": {
+                    "image1": {
+                        "image": "img/blafestival/segmentation.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/blafestival/tematisk_analysis.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/blafestival/persona1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/blafestival/persona2.png",
+                        "alt_text": "alt text"
+                    },
+                    "image5": {
+                        "image": "img/blafestival/persona_analysis1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image6": {
+                        "image": "img/blafestival/persona_analysis2.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Vi startede med at få en forståelse for hvem brugerene af en jazz-festival kunne være ved at lave brugersegmentering på objektive og subjektive forhold, og forstå hvilke behov de kunne have gennem kvalitative interviews, tematisk analyse og personas.",
+                    "paragraf2": "I vores brugersegmentering arbejdede vi først ud fra nogle generelle antagelser vi havde, som vi efterfølgende supplerende eller tilpassede med noget standard data. Dette efterlod os med to brugergrupper:",
+                    "paragraf3": "- Unge, som har musik som interesse og gerne tager til koncert og festival med venner.",
+                    "paragraf4": "- Forældre/voksenvenner, der tager afsted til musikarrangementer sammen.",
+                    "paragraf5": "Disse brugergrupper brugte vi til at finder interviewpersoner, vi ville altså interviewe personer havde en interesse for at tage til koncerter eller andre musik arrangementer sammen. Vi lavede i alt 4 interviews, og udførte tematisk analyse på alle traskriberingerne, for at kunne sammenligne dataen indsamlet fra hvert interview. Ud fra vores tematiske analyse kunne vi opsætte to relevante teamer for webapplikationen:",
+                    "paragraf6": "- Sammenhold og fællesskab er en vigtig del",
+                    "paragraf7": "- Wayfinding skal være let tilgængeligt/overskueligt",
+                    "paragraf8": "Dataen fra vores interviews brugte vi også til at opsætte to personas. Disse personas brugte vi til at få en bedre forståelse for brugeren, samt at få en ide over funktionaliteter der kunne være relevante i forhold til brugeren. Det er blevet gjor ved at lave situationer og scenarier hvor en persona fra hver brugergruppe, navigere en fiktiv webapplikation. Disse er de vigtigste observationer:",
+                    "paragraf9": "- Hvert event i program oversigten har sin egen lille boks med et lille billede, navnet på eventet, lokation, tid og dato.",
+                    "paragraf10": "- På forsiden er der et slideshow med udvalgte kunster med kort information om kunsternavn, spillested og tidspunkt. Der kan føre en til en informationsside for eventet.",
+                    "paragraf11": "- Der er mulighed for at filtrer de forskellige events med lokation, tidspunkt, dato og type.",
+                    "paragraf12": "- Nagivation til information om at bive en del af Den Blå Festival som kunstner.",
+                    "paragraf13": "- Standard sortering i programoversigten  efter hvornår koncerterne er."
+                }
+            },
+            "section2": {
+                "heading": "Indhold",
+                "heading_slug": "indhold",
+                "images": {
+                    "image1": {
+                        "image": "img/blafestival/affinity_diagram.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/blafestival/navigation.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/blafestival/content_sitemap1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/blafestival/content_sitemap2.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Til at planlægge hvilket indhold der skulle være på webapplikationen, og hvor det hver især skulle placeres, startede vi ud med at lave et brain dump over alt indholdet og efterfølgende inddelte de i grupper med et affinity diagram. Derefter lavede vi to udgaver af et content sitemap; et til nagivation og wayfinding, og et til den generelle struktur af indholdet."
+                }
+            },
+            "section3": {
+                "heading": "Design",
+                "heading_slug": "design",
+                "images": {
+                    "image1": {
+                        "image": "img/blafestival/wireframe1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/blafestival/wireframe2.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/blafestival/wireframe3.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/blafestival/mock_up1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image5": {
+                        "image": "img/blafestival/mock_up1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image6": {
+                        "image": "img/blafestival/usability_test.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Ud fra det viden vi havde fået gennem vores brugerundersøgelse og vores valg da vi skabte indholdet til siden, designede vi siden i tre faser:",
+                    "paragraf2": "- Skitsering",
+                    "paragraf3": "- Wireframing",
+                    "paragraf4": "- Mock-up/Prototyping",
+                    "paragraf5": "Under skitserings-fasen kom vi alle med ideer til designet, og udvalgte efterfølgende de skitser eller dele af skitser vi sammen følte støttede bedst op om vores indsamlede data. Skitserne blev oversat til wireframes. Inden vi begyndte på mock-ups opsatte vi en mindre designguide til os selv, for at sikre os at vi brugte de samme farver og komponenter hele vejen gennem mock-upsene.",
+                    "paragraf6": "Mock-uppen blev lavet som en interaktiv prototype som vi udførte 5 usability test på, for at teste designet, flowet og indholdet. Ud fra testene blev vi opmærksomme på 3 problematikker:",
+                    "paragraf7": "- Filtrerings-ikonet blev let overset",
+                    "paragraf8": "- Betydningen af ikonerne på koncert-information var ikke selvsigende nok.",
+                    "paragraf9": "- Labelt på vores focus entrypoint gav ikke et tydeligt nok billede om hvor de førte til.",
+                    "paragraf10": "Alle tre ting blev hurtigt rettet til, og mock-upsene var klar til at blive omsat til en reel webapplikation."
+                }
+            },
+            "section4": {
+                "heading": "Realisering",
+                "heading_slug": "realisering",
+                "images": {
+                    "image1": {
+                        "image": "img/blafestival/generate_card1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/blafestival/generate_card2.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/blafestival/filter1.png",
+                        "alt_text": "alt text"
+                    },
+                    "image4": {
+                        "image": "img/blafestival/filter2.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "En vigtig funktion til webapplikationen var muligheden for at filterer i koncerterne. For at det kunne lade sig gøre, krævede det at hver card var dynamisk lavet gennem JavaScript.",
+                    "paragraf2": "Der blev først opsat en template for et card, så designet var i skabet, da HTML skulle bruges til at skabe hvert card gennem JavaScriptet. Indholdet skulle sættes ind sammen med, men det skulle selvfølgelig være forskelligt ved hver koncert, så alle koncertne blev opsat som et objekt, der indholdte alt informationen der var knyttet til at et card.",
+                    "paragraf3": "For at vælge hvilke ikoner der skal vises, tjekkes der om informationen er true eller false, og alt efter hvad værdien er sættes en variable til det ikon der skal vises. Variablen kan så sættes ind  i skabelsen af kortet.",
+                    "paragraf4": "Hvis der ikke var sat nogle filtre op, ville der blive loopet igennem listen af objekter og skabt et card for hvert objekt i listen.",
+                    "paragraf5": "Er der valgt et eller flere filter, bliver hvert objekt tjekket efter om det har et id der matcher det valgte filter, og de bliver så gemt i et array, der bruges til at udvælge hvilke cards der skal skabes.",
+                    "paragraf6": "For at gøre det nemmere for brugeren at gøre brug af telefonnumre og emails henvist til i webapplikationen, har vi gjort brug af tel: og mailto: inde i href-attributterne, så et klik på telefonnumre eller emails åbner op i brugerens opkalds- eller mailapplikationer."
+                }
+            },
+            "section5": {
+                "heading": "Opsamling",
+                "heading_slug": "opsamling",
+                "images": {
+                    "image1": {
+                        "image": "img/blafestival/hero_fin.png",
+                        "alt_text": "alt text"
+                    },
+                    "image2": {
+                        "image": "img/blafestival/program_fin.png",
+                        "alt_text": "alt text"
+                    },
+                    "image3": {
+                        "image": "img/blafestival/filter_fin.png",
+                        "alt_text": "alt text"
+                    }
+                },
+                "content": {
+                    "paragraf1": "Når man ser på vores webapplikation kan man diskutere om hvor godt vi har løst opgaven med at lave en “webapplikation”. For at give brugeren et mere overskueligt overblik over koncerterne, kan man sætte spørgsmålstegn ved om indholdet om generelt information og kontaktinformationer er aktuelt i en webapplikation. Vi havde svært ved helt at skabe os en forståelse for hvad en webapplikation præcist var. ",
+                    "paragraf2": " Når det er sagt, er det noget nemmere at finde og se de forskellige koncerter i vores applikation, end i Den Blå Festivals aktuelle koncertprogramoversigt i PDF format. Brugere har mulighed for at lave filtrering efter de forskellige informationer, og nemmere finde hvis de søger noget specifikt. I en færdig udvikling af webapplikationen, ville der selvfølgelig være flere filtreringsmuligheder end blot dag og lokation, heriblandt blandt andet kunstnere, tidspunkt og sted."
+                }
+            }
+        }
+    }
+]

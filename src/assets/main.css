@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  color: #160F0E;
+  background-color: #F9F6F2;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  gap: 32px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+section {
+  grid-column: 2/-2;
+  gap: 32px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  max-width: 60ch;
+}
+
+button,
+.btn {
+  background: #95785D;
+  color: #FEFEFD;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.322);
+  transition: .3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+  background: #866b52;
+  transform: rotate(1deg);
+}
+
+button:active,
+.btn:active {
+  transform: scale(.95);
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.322);
+
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.floatingDecor {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.decor {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+button.carousel__prev,
+button.carousel__next {
+  background-image: url(../assets/img/decor2.svg);
+
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.233));
+}
+
+button.carousel__prev:hover,
+button.carousel__next:hover {
+  color: #160F0E;
+  background: none;
+  background-image: url(../assets/img/decor2.svg);
+
+}
+
+button.carousel__prev:hover {
+  transform: scale(1.1) translateY(-50%) rotate(-7deg);
+}
+
+button.carousel__next:hover {
+  transform: scale(1.1) translateY(-50%) rotate(7deg);
+}
+
+button.carousel__next:active,
+button.carousel__prev:active {
+  transform: scale(.95) translateY(-50%);
+}
+
+.carousel__pagination-item {
+  margin: 0 2px;
+}
+
+.carousel__pagination-button {
+  background: #95785d8a;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+button.carousel__pagination-button:hover::after {
+  background: none;
+}
+
+button.carousel__pagination-button::after {
+  background: none;
+}
+
+button.carousel__pagination-button--active {
+  background: #95785D;
+  transform: scale(1.2);
+}

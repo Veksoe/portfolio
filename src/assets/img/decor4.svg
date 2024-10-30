@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none"  viewBox="0 0 777 777" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.pulse {
+  transform-origin: 50% 50%;
+  animation: pulseAnim 8s ease-in-out infinite;
+}
+
+@keyframes pulseAnim {
+  0% {
+    transform: scale(90%, 100%);
+  }
+
+  50% {
+    transform: scale(100%, 90%);
+
+  }
+
+  100% {
+    transform: scale(90%, 100%);
+  }
+}
+</style>
+<path class="pulse" d="M273.656 37.3897C380.851 20.0767 487.111 -82.8682 659.602 151.351C737.394 298.856 821 403.5 749.138 511.497C614.5 675.5 567 796 337 774C242.5 746 86 611.5 9.64521 422.455C-40.3449 194.178 132.939 79.5723 273.656 37.3897Z" fill="#8CA69E"/>
+</svg>
