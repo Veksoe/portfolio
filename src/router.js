@@ -1,9 +1,7 @@
 // router.js
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from './views/HomeView.vue'
-import ProjectsView from './views/ProjectsView.vue'
-import ProjectCaseView from './views/ProjectCaseView.vue'
-import AboutMeView from './views/AboutMeView.vue'
+import AboutMeView from './views/MinProfilView.vue'
 
 
 
@@ -14,24 +12,13 @@ const router = createRouter({
     // The pages/routes for the site
     routes: [
         {
-            path: '/class/MMD-CSD-S23/10191754/portfolio/index.html',
+            path: '/',
             name: 'home',
             component: HomeView
         },
         {
-            path: '/class/MMD-CSD-S23/10191754/portfolio/projects',
-            name: 'projects',
-            component: ProjectsView
-        },
-        {
-            // Dynamisk rute med slug som parameter. Her har vi oprettet en dynamisk rute for projekt-detaljer med stien '/projects/:slug'. Parameteren :slug gør, at du kan bruge projektets slug til at navigere til det specifikke projekt.
-            path: '/class/MMD-CSD-S23/10191754/portfolio/projects/:slug',
-            name: 'project-details',
-            component: ProjectCaseView,
-            props: true // Dette gør, at vi kan få adgang til sluggen som en prop i komponenten
-        }, {
-            path: '/class/MMD-CSD-S23/10191754/portfolio/aboutme',
-            name: 'about-me',
+            path: '/minprofil',
+            name: 'min-profil',
             component: AboutMeView,
         },
 

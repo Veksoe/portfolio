@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary-color: #ecc4a6;
+  --secondary-color: #018780;
+  --accent1-color: #ED775B;
+  --accent2-color: #C6E0D3;
+}
 
 html {
   scroll-behavior: smooth;
@@ -8,7 +16,6 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
-  font-weight: normal;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -21,23 +28,55 @@ body {
   font-size: 16px;
   text-rendering: optimizeLegibility;
   color: #160F0E;
-  background-color: #F9F6F2;
+  background-color: #F8F2E9;
+}
+
+.active:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 3px;
+  background-color: #018780;
+  transition: all 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 1px;
+  background-color: #018780;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 10% 1fr 10%;
-  gap: 32px;
-  max-width: 1920px;
+  max-width: 1950px;
   margin: auto;
 }
 
 section {
-  grid-column: 2/-2;
-  gap: 32px;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  margin: 32px 0;
+}
+
+@media (min-width: 640px) {
+  section {
+    margin: 80px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin: 100px 0;
+  }
 }
 
 h1,
@@ -54,14 +93,15 @@ p {
 
 button,
 .btn {
-  background: #95785D;
+  background: var(--secondary-color);
   color: #FEFEFD;
   cursor: pointer;
   border: none;
-  border-radius: 30px;
+  border-radius: 18px;
   padding: 12px 32px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+  text-transform: uppercase;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.322);
   transition: .3s;
   text-decoration: none;
@@ -70,8 +110,10 @@ button,
 
 button:hover,
 .btn:hover {
-  background: #866b52;
   transform: rotate(1deg);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322);
+
+
 }
 
 button:active,
@@ -99,6 +141,7 @@ img {
   background-repeat: no-repeat;
 }
 
+/* 
 button.carousel__prev,
 button.carousel__next {
   background-image: url(../assets/img/decor2.svg);
@@ -152,4 +195,4 @@ button.carousel__pagination-button::after {
 button.carousel__pagination-button--active {
   background: #95785D;
   transform: scale(1.2);
-}
+} */

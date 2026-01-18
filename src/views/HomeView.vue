@@ -1,174 +1,72 @@
+<script setup lang="ts">
+import SkillCards from '@/components/SkillCards.vue';
+import skills from '../data/skills.json'
+import InfoCards from '@/components/InfoCards.vue';
+
+</script>
+
 <template>
     <main>
-        <section class="hero">
-            <div class="profileContainer"><img class="profilIMG" src="../assets/img/profil.png"
-                    alt="A picture of a smiling Annika">
-                <div class="floatingDecor" id="briefDecor">
-                    <p>Jeg stræber efter at blive en dygtig og effektiv
-                        frontend-udvikler. Jeg har en drøm at at
-                        dygtiggøre mig til at kunne arbejde på et højt
-                        nivuea, og altid lærer nyt.</p>
-                </div>
-            </div>
-            <div class="infoContainer">
-                <p class="introText">Mit navn er</p>
-                <h1> Annika Veksø</h1>
-                <h2>Frontend-Udvikler</h2>
-                <div class="statusContainer">
-                    <p> <span class="statusDot"></span> Åben for arbejde </p>
-                    <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" /> Aalborg</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <article class="introduction">
-                <h2>Engageret frontend-udvikler med gode
-                    kommunikationsevner</h2>
-                <p>Jeg er en hårdarbejdende frontend-udvikler, med erfaring inde for brugercentreret
-                    design og spiludvikling.</p>
-                <p>Jeg er en pålidelig og tålmodig person, der nyder at bruge mine kreative evner til at
-                    skabe heriblandt hjemmesider. Med erfaring indefor at arbejde med problemløsning og i
-                    teams, er jeg en god kandidat til at arbejde sammen med andre.</p>
-                <p>Mit mål er at kunne bruge mine kreative kompetencer sammen med min erfaring og
-                    viden inden for HTML, CSS og JavaScript, til at bygge funktionelle hjemmesider, der giver
-                    en god brugeroplevelse.</p>
-                <h3>Mine skills:</h3>
-                <div class="skillsContainer"><font-awesome-icon :icon="['fab', 'html5']" color="#EE9B0E" />
-                    <font-awesome-icon :icon="['fab', 'css3-alt']" color="#189DCF" />
-                    <font-awesome-icon :icon="['fab', 'js']" color="#E1D317" />
-                    <font-awesome-icon :icon="['fab', 'git-alt']" color="#F03C2E" />
-                    <font-awesome-icon :icon="['fab', 'vuejs']" color="#3fb27f" />
-                    <font-awesome-icon :icon="['fab', 'wordpress']" color=" steelblue" />
-                    <font-awesome-icon :icon="['fab', 'figma']" color="black" />
-                </div>
-            </article>
-            <div class="decor"><img src="../assets/img/arbejde.png" alt=""></div>
-        </section>
-        <section>
-            <img class="projects" src="../assets/img/projects.png" alt="">
-            <article class="projektInfo">
-                <h2>Nysgerrig på hvad jeg kan byde på?</h2>
-                <p>Med en generel interesse i at designe, udvikle og skabe har jeg haft fingrene i flere forskellige
-                    projekter, hvor mine evner som udvikler har været i spil i forskellige roller.</p>
-                <RouterLink to="/class/MMD-CSD-S23/10191754/portfolio/projects" class="btn"> Se hvad jeg har lavet
-                </RouterLink>
+        <section
+            class="bg-[url(../assets/img/graphics/bg-1.svg))]  bg-no-repeat bg-center bg-cover w-full flex items-center xl:gap-8 justify-center py-16 my-0!">
+            <div class="hidden md:flex relative w-[450px] h-[450px] justify-center items-center [mask-image:url('../assets/img/graphics/circle-mask.svg') ]
+                      [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+                      [mask-size:cover] [-webkit-mask-size:cover]
+                      [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
+                      [mask-position:top] [-webkit-mask-position:top]">
 
-            </article>
+                <!-- Baggrunds-SVG, fungerer som border -->
+                <div class="absolute inset-0">
+                    <img src="../assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
+                </div>
+
+                <img src="../assets/img/profil.jpg" class="w-[440px] h-[440px] object-cover object-top!
+            [mask-image:url('../assets/img/graphics/circle-mask.svg')]
+            [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+            [mask-size:cover] [-webkit-mask-size:cover]
+            [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
+            [mask-position:top] [-webkit-mask-position:top] " alt="Profilbillede" />
+            </div>
+
+
+            <div>
+                <div class="bg-[var(--primary-color)] p-12 rounded-t-md lg:rounded-md ml-4 md:ml-0 mr-4">
+                    <p class="font-bold">Mit navn er</p>
+                    <h1 class="text-5xl md:text-7xl"> Annika Veksø</h1>
+                    <h2 class="text-lg">Frontend-Udvikler</h2>
+                    <div class="flex  flex-col gap-4 md:flex-row md:items-center uppercase ">
+                        <p> <span class="w-4 h-4 rounded-full bg-emerald-500 inline-block"></span> Åben for arbejde </p>
+                        <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" /> Aalborg</p>
+                    </div>
+                </div>
+                <div class="bg-[#F7EEE5] shadow-lg p-8  rounded-md md:w-[500px] lg:mx-12 ml-4 md:ml-0 mr-4">
+                    <h3 class="text-2xl">Min motivation?</h3>
+                    <p>“ Jeg stræber efter at blive en dygtig og effektiv frontend-udvikler. Jeg har en drøm at at
+                        dygtiggøre mig til at kunne arbejde på et højt nivuea, og altid lærer nyt. “</p>
+                </div>
+            </div>
+        </section>
+        <section class="text-center flex flex-col items-center gap-2 mx-4!">
+            <h2 class="text-3xl">Engageret frontend-udvikler med gode kommunikationsevner</h2>
+            <p>Med en kreativ tilgang og stærke kompetencer i HTML, CSS og JavaScript skaber jeg funktionelle og
+                indbydende løsninger, der giver en god brugeroplevelse. Jeg trives i samarbejde, arbejder struktureret
+                og har blik for detaljen – altid med brugeren i fokus.</p>
+            <RouterLink to="/aboutme" class="btn"> Lær mere om hvem jeg er
+            </RouterLink>
+        </section>
+        <section class="flex flex-wrap  sm:gap-x-4 lg:gap-x-10 gap-y-22 justify-center pt-12 mx-4!">
+            <SkillCards v-for="skill in skills" :imageName="skill.imageName" :altText="skill.altText"
+                :skill="skill.skill" :description="skill.description" />
+        </section>
+        <section
+            class="flex flex-wrap sm:gap-x-4 lg:gap-x-10 0 gap-y-8 justify-center  lg:bg-[url(../assets/img/graphics/bg-2-medium.svg))]  bg-no-repeat bg-center bg-contain px-4">
+            <InfoCards imageName="graduate.png" altText="Billede af en kop fra virksomheden JCD."
+                heading="Graduate Web Developer"
+                description="I 6 måneder var jeg hos JCD A/S som Graduate Web Developer, hvor jeg udviklede custom designs og hjemmesider i Umbraco. Jeg arbejdede både med små rettelser på kunders sider og interne projekter, og har erfaring med C#, TypeScript, Vue.js, Tailwind, Figma og Umbraco Backoffice. " />
+            <InfoCards imageName="projects.png" altText="" heading="Multimedie Designer"
+                description="På min 2-årige uddannelse som Multimedie Designer arbejdede jeg med design og udvikling af brugervenlige hjemmesider. Jeg brugte metoder til at forstå brugernes behov og omsatte dem til løsninger med HTML, JavaScript og Vue.js, kombineret med brugercentreret design og prototyping. " />
+            <InfoCards imageName="ducktopia.png" altText="Cover billede til spillet Ducktopia" heading="Spiludvikling"
+                description="Jeg har arbejdet med flere små computerspil, både gennem uddannelse og hobbyprojekter. Her har jeg designet 3D-modeller til omgivelser, bygget level design og udviklet brugergrænseflader, samtidig med at jeg samarbejdede med programmører for at skabe engagerende og sammenhængende spiloplevelser.." />
         </section>
     </main>
 </template>
-
-<style scoped>
-.hero {
-    margin: 50px 0;
-}
-
-.profileContainer {
-    grid-column: 1/6;
-    justify-self: center;
-    max-height: 600px;
-    position: relative;
-
-    img {
-        mask-image: url(../assets/img/decor4.svg);
-        mask-size: cover;
-    }
-}
-
-
-#briefDecor {
-    background-image: url(../assets/img/decor1.svg);
-    width: 120%;
-    bottom: 10px;
-    left: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 70px;
-}
-
-.infoContainer {
-    grid-column: 6/12;
-    margin-top: 130px;
-    margin-left: 40px;
-
-    .introText {
-        font-family: "Bubblegum Sans", sans-serif;
-        font-size: 1.5rem;
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 5.6rem;
-        margin: 0 0;
-        line-height: 1;
-    }
-
-    h2 {
-        margin: 0;
-    }
-
-    .statusContainer {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-
-        p {
-            text-transform: uppercase;
-        }
-
-        .statusDot {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: rgb(50, 231, 75);
-            border-radius: 50%;
-        }
-    }
-
-}
-
-.introduction {
-    grid-column: 1/6;
-    align-self: center;
-
-    h3 {
-        margin: 0;
-    }
-
-    .skillsContainer {
-        display: flex;
-        gap: 32px;
-        font-size: 3rem;
-        flex-wrap: wrap;
-    }
-}
-
-.decor {
-    grid-column: 6/12;
-    background-image: url(../assets/img/decor2.svg);
-    min-height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-
-        mask-image: url(../assets/img/decor4.svg);
-        mask-repeat: no-repeat;
-        mask-position: center;
-        height: 100%;
-    }
-}
-
-.projects {
-    grid-column: 1/7;
-}
-
-.projektInfo {
-    grid-column: 7/12;
-    align-self: center;
-
-
-}
-</style>

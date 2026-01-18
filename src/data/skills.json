@@ -1,0 +1,50 @@
+[
+    {
+        "imageName": "html5-brands-solid-full.svg",
+        "altText": "Icon for HTML 5",
+        "skill": "HTML 5",
+        "description": "Erfaren i semantisk og struktureret markup. Jeg bygger tilgængelige og brugervenlige layouts med fokus på best practices."
+    },
+    {
+        "imageName": "css3-alt-brands-solid-full.svg",
+        "altText": "Ikon for CSS3",
+        "skill": "CSS 3/Tailwind",
+        "description": "Erfaren i responsivt design og moderne layoutteknikker. Jeg bruger CSS og Tailwind til at skabe stilrene, fleksible og intuitive interfaces."
+    },
+    {
+        "imageName": "square-js-brands-solid-full.svg",
+        "altText": "Ikon for JavaScript",
+        "skill": "JavaScript/TypeScript",
+        "description": "Øvet i at bruge JavaScript og TypeScript til at skabe dynamisk funktionalitet og interaktive elementer."
+    },
+    {
+        "imageName": "umbraco-brands-solid-full.svg",
+        "altText": "Ikon for Umbraco",
+        "skill": "CMS",
+        "description": "Kompetent i at arbejde med custom designs i Umbraco Backoffice. Jeg har også erfaring med WordPress."
+    },
+    {
+        "imageName": "figma-brands-solid-full.svg",
+        "altText": "Logo for Figma",
+        "skill": "Figma",
+        "description": "Erfaren i at opsætte interaktive prototyper og visualisere designs i Figma, både til præsentation og intern dokumentation."
+    },
+    {
+        "imageName": "code-solid-full.svg",
+        "altText": "Ikon der repræsenterer kodning/C#",
+        "skill": "C#",
+        "description": "Øvet i at bruge C# til udvikling af custom Umbraco-moduler og små spilprojekter."
+    },
+    {
+        "imageName": "git-alt-brands-solid-full.svg",
+        "altText": "Ikon for Git",
+        "skill": "Git",
+        "description": "Øvet i at bruge Git til versionsstyring og effektivt samarbejde på tværs af projekter."
+    },
+    {
+        "imageName": "vuejs-brands-solid-full.svg",
+        "altText": "Ikon for Vue.js",
+        "skill": "Vue.js",
+        "description": "Øvet i at bruge Vue.js til at bygge dynamiske og genanvendelige brugergrænseflader og komponenter."
+    }
+]
