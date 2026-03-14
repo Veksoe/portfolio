@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import Signature from '@/assets/icons/signature.vue'
+// import Signature from '@/assets/icons/signature.vue'
 
 const isAtTop = ref(true)
 
