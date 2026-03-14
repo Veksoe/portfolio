@@ -1,12 +1,12 @@
 // router.js
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHasHistory } from 'vue-router'
 import HomeView from './views/HomeView.vue'
 import AboutMeView from './views/MinProfilView.vue'
 
 
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHasHistory(),
     // Adds the class "active" to the page the user is currently visiting.
     linkActiveClass: 'active',
     // The pages/routes for the site
