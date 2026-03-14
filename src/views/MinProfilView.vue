@@ -120,10 +120,11 @@ onUnmounted(() => {
             </div>
             <article class="bg-[#F8F2E9] shadow-md p-8 rounded-md inline-block ml-4 md:ml-0">
                 <h2 class="text-2xl">Hvad min drivkraft er?</h2>
-                <p>At skabe med henblik på at lave noget der er brugbart, er meget af det der holder mig motiveret på et
+                <p>"At skabe med henblik på at lave noget der er brugbart, er meget af det der holder mig motiveret på
+                    et
                     projekt. At vide at det jeg laver, er noget andre kan få glæde af eller får noget ud af, er den
                     fedeste følelse, og derfor brænder jeg efter at bruge mine evner inde for web-udvikling til at
-                    udvikle sider der er responsive og som giver brugeren en god og mindeværdig oplevelse.</p>
+                    udvikle sider der er responsive og som giver brugeren en god og mindeværdig oplevelse."</p>
             </article>
         </section>
         <section class="grid lg:grid-cols-3 gap-4 mx-4!">

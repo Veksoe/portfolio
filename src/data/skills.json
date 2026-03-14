@@ -1,5 +1,23 @@
 [
     {
+        "imageName": "umbraco-brands-solid-full.svg",
+        "altText": "Ikon for Umbraco",
+        "skill": "CMS",
+        "description": "Kompetent i at arbejde med custom designs i Umbraco Backoffice. Jeg har også erfaring med WordPress."
+    },
+    {
+        "imageName": "vuejs-brands-solid-full.svg",
+        "altText": "Ikon for Vue.js",
+        "skill": "Vue.js",
+        "description": "Øvet i at bruge Vue.js til at bygge dynamiske og genanvendelige brugergrænseflader og komponenter."
+    },
+    {
+        "imageName": "figma-brands-solid-full.svg",
+        "altText": "Logo for Figma",
+        "skill": "Figma",
+        "description": "Erfaren i at opsætte interaktive prototyper og visualisere designs i Figma, både til præsentation og intern dokumentation."
+    },
+    {
         "imageName": "html5-brands-solid-full.svg",
         "altText": "Icon for HTML 5",
         "skill": "HTML 5",
@@ -18,18 +36,6 @@
         "description": "Øvet i at bruge JavaScript og TypeScript til at skabe dynamisk funktionalitet og interaktive elementer."
     },
     {
-        "imageName": "umbraco-brands-solid-full.svg",
-        "altText": "Ikon for Umbraco",
-        "skill": "CMS",
-        "description": "Kompetent i at arbejde med custom designs i Umbraco Backoffice. Jeg har også erfaring med WordPress."
-    },
-    {
-        "imageName": "figma-brands-solid-full.svg",
-        "altText": "Logo for Figma",
-        "skill": "Figma",
-        "description": "Erfaren i at opsætte interaktive prototyper og visualisere designs i Figma, både til præsentation og intern dokumentation."
-    },
-    {
         "imageName": "code-solid-full.svg",
         "altText": "Ikon der repræsenterer kodning/C#",
         "skill": "C#",
@@ -40,11 +46,5 @@
         "altText": "Ikon for Git",
         "skill": "Git",
         "description": "Øvet i at bruge Git til versionsstyring og effektivt samarbejde på tværs af projekter."
-    },
-    {
-        "imageName": "vuejs-brands-solid-full.svg",
-        "altText": "Ikon for Vue.js",
-        "skill": "Vue.js",
-        "description": "Øvet i at bruge Vue.js til at bygge dynamiske og genanvendelige brugergrænseflader og komponenter."
     }
 ]

@@ -51,7 +51,7 @@ import InfoCards from '@/components/InfoCards.vue';
             <p>Med en kreativ tilgang og stærke kompetencer i HTML, CSS og JavaScript skaber jeg funktionelle og
                 indbydende løsninger, der giver en god brugeroplevelse. Jeg trives i samarbejde, arbejder struktureret
                 og har blik for detaljen – altid med brugeren i fokus.</p>
-            <RouterLink to="/aboutme" class="btn"> Lær mere om hvem jeg er
+            <RouterLink to="/minprofil" class="btn"> Lær mere om hvem jeg er
             </RouterLink>
         </section>
         <section class="flex flex-wrap  sm:gap-x-4 lg:gap-x-10 gap-y-22 justify-center pt-12 mx-4!">
