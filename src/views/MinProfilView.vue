@@ -31,7 +31,7 @@ onUnmounted(() => {
     <main>
         <section class="mt-12!">
             <h1
-                class="bg-[url(../assets/img/graphics/header-bg.svg))]  bg-no-repeat bg-center bg-cover pt-14 pb-24 text-5xl text-center mb-16">
+                class="bg-[url(@/assets/img/graphics/header-bg.svg))]  bg-no-repeat bg-center bg-cover pt-14 pb-24 text-5xl text-center mb-16">
                 Min profil</h1>
             <div class="mx-4! xl:mx-auto!  relative flex flex-col gap-4 xl:w-[80%] 2xl:w-[60%]">
                 <div class="bg-[var(--accent2-color)] p-8 rounded-md fit lg:mr-70 xl:mr-88 lg:pr-32">
@@ -60,7 +60,7 @@ onUnmounted(() => {
                     </h2>
                 </div>
                 <div class="hidden lg:block absolute  right-0 top-1/2 -translate-y-1/2">
-                    <div class="relative w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] flex justify-center items-center [mask-image:url('../assets/img/graphics/circle-mask.svg') ]
+                    <div class="relative w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] flex justify-center items-center [mask-image:url('@/assets/img/graphics/circle-mask.svg') ]
                       [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
                       [mask-size:cover] [-webkit-mask-size:cover]
                       [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
@@ -68,12 +68,12 @@ onUnmounted(() => {
 
                         <!-- Baggrunds-SVG, fungerer som border -->
                         <div class="absolute inset-0">
-                            <img src="../assets/img/graphics/circle-bg-dark.svg" class="w-full h-full object-cover" />
+                            <img src="@/assets/img/graphics/circle-bg-dark.svg" class="w-full h-full object-cover" />
                         </div>
 
-                        <img src="../assets/img/minProfil.jpg" class="w-[390px] h-[390px] xl:w-[490px] xl:h-[490px] object-cover object-top!
-                                [mask-image:url('../assets/img/graphics/circle-mask.svg')]
-                                [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+                        <img src="@/assets/img/minProfil.jpg" class="w-[390px] h-[390px] xl:w-[490px] xl:h-[490px] object-cover object-top!
+                                [mask-image:url('@/assets/img/graphics/circle-mask.svg')]
+                                [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
                                 [mask-size:cover] [-webkit-mask-size:cover]
                                 [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
                                 [mask-position:top] [-webkit-mask-position:top]" alt="Profilbillede" />
@@ -99,21 +99,21 @@ onUnmounted(() => {
                         hjernen i gang." />
         </section>
         <section
-            class="bg-[url(../assets/img/graphics/bg-1.svg))]  bg-no-repeat bg-center bg-cover  flex items-center lg:gap-4 xl:gap-8 justify-center py-16 pr-4 lg:pl-4">
-            <div class="hidden md:flex relative w-[350px] h-[350px]  justify-center items-center [mask-image:url('../assets/img/graphics/circle-mask.svg') ]
-                      [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+            class="bg-[url(@/assets/img/graphics/bg-1.svg))]  bg-no-repeat bg-center bg-cover  flex items-center lg:gap-4 xl:gap-8 justify-center py-16 pr-4 lg:pl-4">
+            <div class="hidden md:flex relative w-[350px] h-[350px]  justify-center items-center [mask-image:url('@/assets/img/graphics/circle-mask.svg') ]
+                      [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
                       [mask-size:cover] [-webkit-mask-size:cover]
                       [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
                       [mask-position:top] [-webkit-mask-position:top]">
 
                 <!-- Baggrunds-SVG, fungerer som border -->
                 <div class="absolute inset-0">
-                    <img src="../assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
+                    <img src="@/assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
                 </div>
 
-                <img src="../assets/img/motivation.jpg" class="w-[340px] h-[340px] object-cover object-top!
-            [mask-image:url('../assets/img/graphics/circle-mask.svg')]
-            [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+                <img src="@/assets/img/motivation.jpg" class="w-[340px] h-[340px] object-cover object-top!
+            [mask-image:url('@/assets/img/graphics/circle-mask.svg')]
+            [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
             [mask-size:cover] [-webkit-mask-size:cover]
             [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
             [mask-position:top] [-webkit-mask-position:top]" alt="Profilbillede" />
@@ -128,7 +128,7 @@ onUnmounted(() => {
             </article>
         </section>
         <section class="grid lg:grid-cols-3 gap-4 mx-4!">
-            <h2 class="col-span-full text-3xl">Mine erfaringer er..</h2>
+            <h2 class="col-span-full text-3xl">Mine erfaringer er@</h2>
             <ProfilCards imageName="school.jpg" altText="info.altText" heading="Medialogi og Multimedie Designer"
                 description="Foruden min vidergående uddannelse i multimediedesigner har jeg også en bachelor i medialogi, hvor jeg er blevet introduceret til en masse forskelligt viden inden for it-branchen. Under uddannelsen har jeg blandt andet lavet gruppeprojekter hvor jeg har arbejdet med problemløsning, brugerundersøgelser og evalueringer, brugercentreret design, forskellige programmeringssprog som blandt andet Python og C#." />
             <ProfilCards imageName="gym.jpg" altText="info.altText" heading="Gymnastik intruktør"
