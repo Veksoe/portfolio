@@ -17,12 +17,12 @@ import InfoCards from '@/components/InfoCards.vue';
 
                 <!-- Baggrunds-SVG, fungerer som border -->
                 <div class="absolute inset-0">
-                    <img src="../assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
+                    <img src="@/assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
                 </div>
 
-                <img src="../assets/img/profil.jpg" class="w-[440px] h-[440px] object-cover object-top!
-            [mask-image:url('../assets/img/graphics/circle-mask.svg')]
-            [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+                <img src="@/assets/img/profil.jpg" class="w-[440px] h-[440px] object-cover object-top!
+            [mask-image:url('@/assets/img/graphics/circle-mask.svg')]
+            [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
             [mask-size:cover] [-webkit-mask-size:cover]
             [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
             [mask-position:top] [-webkit-mask-position:top] " alt="Profilbillede" />
