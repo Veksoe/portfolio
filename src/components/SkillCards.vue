@@ -6,8 +6,13 @@ const props = defineProps({
     skill: { type: String, required: true },
     description: { type: String, required: true }
 })
+const images = import.meta.glob('../assets/icons/*', {
+    eager: true,
+    import: 'default'
+})
+
 const imageSrc = computed(() => {
-    return new URL(`../assets/icons/${props.imageName}`, import.meta.url).href
+    return images[`../assets/icons/${props.imageName}`]
 })
 </script>
 

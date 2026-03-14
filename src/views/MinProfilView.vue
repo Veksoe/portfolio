@@ -128,7 +128,7 @@ onUnmounted(() => {
             </article>
         </section>
         <section class="grid lg:grid-cols-3 gap-4 mx-4!">
-            <h2 class="col-span-full text-3xl">Mine erfaringer er@</h2>
+            <h2 class="col-span-full text-3xl">Mine erfaringer er..</h2>
             <ProfilCards imageName="school.jpg" altText="info.altText" heading="Medialogi og Multimedie Designer"
                 description="Foruden min vidergående uddannelse i multimediedesigner har jeg også en bachelor i medialogi, hvor jeg er blevet introduceret til en masse forskelligt viden inden for it-branchen. Under uddannelsen har jeg blandt andet lavet gruppeprojekter hvor jeg har arbejdet med problemløsning, brugerundersøgelser og evalueringer, brugercentreret design, forskellige programmeringssprog som blandt andet Python og C#." />
             <ProfilCards imageName="gym.jpg" altText="info.altText" heading="Gymnastik intruktør"
