@@ -8,9 +8,9 @@ import InfoCards from '@/components/InfoCards.vue';
 <template>
     <main>
         <section
-            class="bg-[url(../assets/img/graphics/bg-1.svg))]  bg-no-repeat bg-center bg-cover w-full flex items-center xl:gap-8 justify-center py-16 my-0!">
-            <div class="hidden md:flex relative w-[450px] h-[450px] justify-center items-center [mask-image:url('../assets/img/graphics/circle-mask.svg') ]
-                      [-webkit-mask-image:url('../assets/img/graphics/circle-mask.svg')]
+            class="bg-[url(@/assets/img/graphics/bg-1.svg))]  bg-no-repeat bg-center bg-cover w-full flex items-center xl:gap-8 justify-center py-16 my-0!">
+            <div class="hidden md:flex relative w-[450px] h-[450px] justify-center items-center [mask-image:url('@/assets/img/graphics/circle-mask.svg') ]
+                      [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
                       [mask-size:cover] [-webkit-mask-size:cover]
                       [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
                       [mask-position:top] [-webkit-mask-position:top]">
@@ -20,7 +20,7 @@ import InfoCards from '@/components/InfoCards.vue';
                     <img src="@/assets/img/graphics/circle-bg-light.svg" class="w-full h-full object-cover" />
                 </div>
 
-                <img src="@/assets/img/profil.jpg" class="w-[440px] h-[440px] object-cover object-top!
+                <img src="@/assets/img/profil.JPG" class="w-[440px] h-[440px] object-cover object-top!
             [mask-image:url('@/assets/img/graphics/circle-mask.svg')]
             [-webkit-mask-image:url('@/assets/img/graphics/circle-mask.svg')]
             [mask-size:cover] [-webkit-mask-size:cover]
@@ -59,7 +59,7 @@ import InfoCards from '@/components/InfoCards.vue';
                 :skill="skill.skill" :description="skill.description" />
         </section>
         <section
-            class="flex flex-wrap sm:gap-x-4 lg:gap-x-10 0 gap-y-8 justify-center  lg:bg-[url(../assets/img/graphics/bg-2-medium.svg))]  bg-no-repeat bg-center bg-contain px-4">
+            class="flex flex-wrap sm:gap-x-4 lg:gap-x-10 0 gap-y-8 justify-center  lg:bg-[url(@/assets/img/graphics/bg-2-medium.svg))]  bg-no-repeat bg-center bg-contain px-4">
             <InfoCards imageName="graduate.png" altText="Billede af en kop fra virksomheden JCD."
                 heading="Graduate Web Developer"
                 description="I 6 måneder var jeg hos JCD A/S som Graduate Web Developer, hvor jeg udviklede custom designs og hjemmesider i Umbraco. Jeg arbejdede både med små rettelser på kunders sider og interne projekter, og har erfaring med C#, TypeScript, Vue.js, Tailwind, Figma og Umbraco Backoffice. " />
